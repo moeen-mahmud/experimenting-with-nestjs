@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Cat } from '../interfaces/cat.interface';
+import { Cat } from './interfaces/cat.interface';
 /**
  * * Services are responsible for creating storage and retrieval of data
  */

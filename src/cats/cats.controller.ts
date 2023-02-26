@@ -7,6 +7,7 @@ import {
   HttpException,
   HttpStatus,
   Param,
+  ParseIntPipe,
   Post,
   Put,
   UseFilters,
@@ -69,8 +70,12 @@ export class CatsController {
 
   // Get by id
   @Get(':id')
-  findOne(@Param(':id') id: string) {
-    return `This returns #${id} of cats`;
+  // 👉 adding a pipe, parseIntPipe to validate the parameter type
+  findOne(
+    @Param(':id')
+    id: number,
+  ) {
+    return this.catsService.findOne(id);
   }
 
   // Put by id

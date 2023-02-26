@@ -1,4 +1,5 @@
 export class CreateCatDTO {
+  id: number;
   name: string;
   age: number;
   breed: string;
@@ -9,6 +10,7 @@ export class ListAllEntities {
 }
 
 export class UpdateCatDTO {
+  id: number;
   name: string;
   age: number;
   breed: string;
